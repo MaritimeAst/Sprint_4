@@ -4,9 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.yandex.praktikum.model.MainPage;
-
 import java.time.Duration;
-
 import static junit.framework.TestCase.assertEquals;
 
 public class QuestionsTest {

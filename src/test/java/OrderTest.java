@@ -7,7 +7,6 @@ import ru.yandex.praktikum.model.OrderPage;
 import java.time.Duration;
 import static org.junit.Assert.assertTrue;
 
-
 public class OrderTest {
 
     //WebDriver driver = new FirefoxDriver();
