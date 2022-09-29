@@ -11,8 +11,8 @@ import static junit.framework.TestCase.assertEquals;
 
 public class QuestionsTest {
 
-    WebDriver driver = new FirefoxDriver();
-    //WebDriver driver = new ChromeDriver();
+    //WebDriver driver = new FirefoxDriver();
+    WebDriver driver = new ChromeDriver();
 
     @Test
     public void checkAnswer1_success(){
