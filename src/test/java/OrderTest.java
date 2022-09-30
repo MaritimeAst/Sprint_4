@@ -9,8 +9,8 @@ import static org.junit.Assert.assertTrue;
 
 public class OrderTest {
 
-    WebDriver driver = new FirefoxDriver();
-    //WebDriver driver = new ChromeDriver();
+    //WebDriver driver = new FirefoxDriver();
+    WebDriver driver = new ChromeDriver();
 
     @Test
     public void checkOrderFromHeader_success(){
@@ -33,7 +33,6 @@ public class OrderTest {
         orderPage.checkOrderButtonRoadMapClickable();
         orderPage.clickRoadMapOrderButton();
         orderPage.fillingOrderForm_set1();
-        orderPage.isOrderCreated();
 
         assertTrue("Окно \"Заказ оформлен\" не появляется", orderPage.isOrderCreated());
     }
@@ -59,7 +58,6 @@ public class OrderTest {
         orderPage.checkOrderButtonRoadMapClickable();
         orderPage.clickRoadMapOrderButton();
         orderPage.fillingOrderForm_set2();
-        orderPage.isOrderCreated();
 
         assertTrue("Окно \"Заказ оформлен\" не появляется", orderPage.isOrderCreated());
     }
