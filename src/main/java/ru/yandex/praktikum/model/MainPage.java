@@ -9,24 +9,42 @@ import java.time.Duration;
 
 public class MainPage {
     private final static String PAGE_URL = "https://qa-scooter.praktikum-services.ru/";
+    //кнопка закрытия поп-ап куки
     private final static By COOKIE_BUTTON = By.id("rcc-confirm-button");
+    //секция "Вопросы о важном"
     private final static By QUESTIONS = By.xpath("//div[@class='Home_FourPart__1uthg']/div[1]");
+    //аккордеон: первый вопрос
     private final static By ACCORDION_HEADING0 = By.id("accordion__heading-0");
+    //аккордеон: второй вопрос
     private final static By ACCORDION_HEADING1 = By.id("accordion__heading-1");
+    //аккордеон: третий вопрос
     private final static By ACCORDION_HEADING2 = By.id("accordion__heading-2");
+    //аккордеон: четвертый вопрос
     private final static By ACCORDION_HEADING3 = By.id("accordion__heading-3");
+    //аккордеон: пятый вопрос
     private final static By ACCORDION_HEADING4 = By.id("accordion__heading-4");
+    //аккордеон: шестой вопрос
     private final static By ACCORDION_HEADING5 = By.id("accordion__heading-5");
+    //аккордеон: седьмой вопрос
     private final static By ACCORDION_HEADING6 = By.id("accordion__heading-6");
+    //аккордеон: восьмой вопрос
     private final static By ACCORDION_HEADING7 = By.id("accordion__heading-7");
 
+    //аккордеон: первый ответ
     private final static By GET_TEXT_OF_ANSWER0 = By.xpath("//div[@id='accordion__panel-0']/p");
+    //аккордеон: второй ответ
     private final static By GET_TEXT_OF_ANSWER1 = By.xpath("//div[@id='accordion__panel-1']/p");
+    //аккордеон: третий ответ
     private final static By GET_TEXT_OF_ANSWER2 = By.xpath("//div[@id='accordion__panel-2']/p");
+    //аккордеон: четвертый ответ
     private final static By GET_TEXT_OF_ANSWER3 = By.xpath("//div[@id='accordion__panel-3']/p");
+    //аккордеон: пятый ответ
     private final static By GET_TEXT_OF_ANSWER4 = By.xpath("//div[@id='accordion__panel-4']/p");
+    //аккордеон: шестой ответ
     private final static By GET_TEXT_OF_ANSWER5 = By.xpath("//div[@id='accordion__panel-5']/p");
+    //аккордеон: седьмой ответ
     private final static By GET_TEXT_OF_ANSWER6 = By.xpath("//div[@id='accordion__panel-6']/p");
+    //аккордеон: восьмой ответ
     private final static By GET_TEXT_OF_ANSWER7 = By.xpath("//div[@id='accordion__panel-7']/p");
 
     private final WebDriver driver;
@@ -80,6 +98,7 @@ public class MainPage {
     public void clickAccordionHeading7(){
         driver.findElement(ACCORDION_HEADING7).click();
     }
+
     public String getTextOfAnswer0(){
         String answerQuestion = driver.findElement(GET_TEXT_OF_ANSWER0).getText();
         return answerQuestion;
@@ -112,6 +131,4 @@ public class MainPage {
         String answerQuestion = driver.findElement(GET_TEXT_OF_ANSWER7).getText();
         return answerQuestion;
     }
-
-
 }
