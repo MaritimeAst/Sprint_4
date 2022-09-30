@@ -23,14 +23,11 @@ public class OrderPage {
             PHONE = xpath("//div[@class='Order_Form__17u6u']/div[5]/input"), //форма заказа: поле ввода телефона
             STATION = xpath("//div[@class='Order_Form__17u6u']/div[4]"), //форма заказа: поле выбра станции, раскрытие выпадающего списка
             STATION_CHOICE = xpath("//div[@class='select-search__select']/ul/li/button/div[2]"), //форма заказа: поле выбра станции, выбор элемента списка для тестового набора 1
-            STATION_CHOICE2 = xpath("//div[@class='select-search__select']/ul/li[5]/button/div[2]"),  //форма заказа: поле выбра станции, выбор элемента списка для тестового набора 2
             BUTTON_NEXT = cssSelector("div.Order_NextButton__1_rCA > button.Button_Middle__1CSJM"), //форма заказа: кнопка "Далее", для перехода на 2ую страницу формы
             DATE = xpath("//div[@class='Order_Form__17u6u']/div/div/div/input"),  //форма заказа: поле для ввода даты
             RENTAL_PERIOD = xpath("//div[@class='Dropdown-control']"), //форма заказа: поле выбора периода аренды, раскрытие выпадающего списка
-            RENTAL_PERIOD_CHOICE = xpath("//div[@class='Dropdown-menu']/div[2]"), //форма заказа: поле выбра периода аренды, выбор элемента списка для тестового набора 1
-            RENTAL_PERIOD_CHOICE2 = xpath("//div[@class='Dropdown-menu']/div[4]"), //форма заказа: поле выбра периода аренды, выбор элемента списка для тестового набора 2
+            RENTAL_PERIOD_CHOICE = xpath("//div[@class='Dropdown-menu']/div[2]"), //форма заказа: поле выбра периода аренды, выбор элемента списка
             COLOR = xpath("//div[@class='Order_Checkboxes__3lWSI']/label[1]"), //форма заказа: выбор цвета для тестового набора 1
-            COLOR2 = xpath("//div[@class='Order_Checkboxes__3lWSI']/label[2]"), //форма заказа: выбор цвета для тестового набора 2
             COMMENT = xpath("//div[@class='Input_InputContainer__3NykH']/input[@class='Input_Input__1iN_Z Input_Responsible__1jDKN']"),  //форма заказа: поле ввода комментария
             ORDER_FORM_BUTTON = xpath("//div[@class='Order_Buttons__1xGrp']/button[2]"), //форма заказа: кнопка "Заказать" в конце формы
             ORDER_CONFIRM_BUTTON = xpath("//div[@class='Order_Modal__YZ-d3']/div[2]/button[2]"), //модальное окно подтверждения заказа, кнопка "Да"
@@ -68,47 +65,47 @@ public class OrderPage {
         driver.findElement(ORDER_ROADMAP_BUTTON).click();
     }
 
-    public void fillingOrderForm_set1() {
-        driver.findElement(NAME).sendKeys("Марина");
-        driver.findElement(SURNAME).sendKeys("Асташкина");
-        driver.findElement(ADDRESS).sendKeys("Адрес");
-        driver.findElement(PHONE).sendKeys("+78009874500");
+    public void name(String name){
+        driver.findElement(NAME).sendKeys(name);
+    }
+    public void surname(String surname) {
+        driver.findElement(SURNAME).sendKeys(surname);
+    }
+    public void address(String address) {
+        driver.findElement(ADDRESS).sendKeys(address);
+    }
+    public void phone(String phone) {
+        driver.findElement(PHONE).sendKeys(phone);
+    }
+    public void station() {
         driver.findElement(STATION).click();
+    }
+    public void stationChoice() {
         driver.findElement(STATION_CHOICE).click();
-
+    }
+    public void buttonNext() {
         driver.findElement(BUTTON_NEXT).click();
-
+    }
+    public void date() {
         driver.findElement(DATE).click();
         driver.findElement(DATE).sendKeys(date);
         driver.findElement(DATE).sendKeys(Keys.ENTER);
 
+    }
+    public void rentalPeriod() {
         driver.findElement(RENTAL_PERIOD).click();
         driver.findElement(RENTAL_PERIOD_CHOICE).click();
-        driver.findElement(COLOR).click();
-        driver.findElement(COMMENT).sendKeys("Позвоните пожалуйста, за полчаса до прибытия");
-        driver.findElement(ORDER_FORM_BUTTON).click();
-        driver.findElement(ORDER_CONFIRM_BUTTON).click();
     }
-
-    public void fillingOrderForm_set2() {
-        driver.findElement(NAME).sendKeys("Иван");
-        driver.findElement(SURNAME).sendKeys("Иванов");
-        driver.findElement(ADDRESS).sendKeys("ул. Ивановская д.1, кв.1");
-        driver.findElement(PHONE).sendKeys("+78009874511");
-        driver.findElement(STATION).click();
-        driver.findElement(STATION_CHOICE2).click();
-
-        driver.findElement(BUTTON_NEXT).click();
-
-        driver.findElement(DATE).click();
-        driver.findElement(DATE).sendKeys(date);
-        driver.findElement(DATE).sendKeys(Keys.ENTER);
-
-        driver.findElement(RENTAL_PERIOD).click();
-        driver.findElement(RENTAL_PERIOD_CHOICE2).click();
-        driver.findElement(COLOR2).click();
-        driver.findElement(COMMENT).sendKeys("Проверьте работоспособность самоката");
+    public void color() {
+        driver.findElement(COLOR).click();
+    }
+    public void comment(String comment) {
+        driver.findElement(COMMENT).sendKeys(comment);
+    }
+    public void orderFormButton() {
         driver.findElement(ORDER_FORM_BUTTON).click();
+    }
+    public void orderConfirmButton() {
         driver.findElement(ORDER_CONFIRM_BUTTON).click();
     }
 
