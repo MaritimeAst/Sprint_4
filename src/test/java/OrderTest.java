@@ -86,7 +86,7 @@ public class OrderTest {
 
         assertTrue("Окно \"Заказ оформлен\" не появляется", orderPage.isOrderCreated());
     }
-    
+
     @After
     public void teardown() {
         driver.quit();
